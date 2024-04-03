@@ -1,13 +1,13 @@
 const fs = require('fs');
 
 
-const installationSKU = (data, code, childData) => {
+const installationSKU = (data, code, childData, files) => {
     const res = Object.keys(data[Object.keys(jsonData)[0]]).find((key) => key  === code)
     if(!res){
-       const data = {...jsonData.skuInstallation,  [code]: [childData]}
-       jsonData.skuInstallation = data;
+       const data = {...jsonData[Object.keys(jsonData)[0]],  [code]: [childData]}
+       jsonData[Object.keys(jsonData)[0]] = data;
        let final = JSON.stringify(jsonData, null, 2);
-       fs.writeFileSync('installationSKU.json', final);
+       fs.writeFileSync(files, final);
        console.log(`Installation data on code: ${code} is added successfully!`);
     }else{
         console.log(`Data is already exist code: ${res}`);
@@ -30,25 +30,38 @@ const handleReadFile = (file) => {
 
 const childData = (key,val) => {
     const value = {
-        [key]: [val]
+        [key]: val
     }
     return value;
 }
 
 
-var childD = childData("installationLink", "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>");
-const jsonData = handleReadFile('installationSKU.json');
-
-
+var childD;
+// const jsonData = handleReadFile('installationSKU.json');
+const jsonData = handleReadFile('SKUContent.json');
+// const jsonData = handleReadFile('installationSKU.json');
+// const jsonData = handleReadFile('installationSKU.json');
 
 switch (Object.keys(jsonData)[0]) {
     case 'skuInstallation':
-        installationSKU(jsonData, 'testData', childD)
-        break;
+       childD = childData("installationLink", 
+       "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>"
+       );
+    break;
+    case 'skuContent':
+       childD = childData("additionalInfo", 
+       "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>"
+       );
+    break;
     default:
         break;
 }
 
+
+installationSKU(jsonData, 'testData', childD, "installationSKU.json")
+installationSKU(jsonData, 'testData', childD, "SKUContent.json")
+installationSKU(jsonData, 'testData', childD, "skuTech.json")
+installationSKU(jsonData, 'testData', childD, "videoSKU.json")
 
 
 
