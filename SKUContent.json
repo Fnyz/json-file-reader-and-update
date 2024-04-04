@@ -409,6 +409,16 @@
       {
         "additionalInfo": "<table> <tbody><tr> <th>Brand</th> <td><p><a href='https://www.karlkustoms.com/brand/chevrolet-performance-powertrain/' rel='tag'>Chevrolet Performance Powertrain</a></p> </td> </tr> </tbody></table>"
       }
+    ],
+    "CPSSP350357TKT56": [
+      {
+        "additionalInfo": "<table class='woocommerce-product-attributes shop_attributes'><tbody><tr class='woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_brand'><th class='woocommerce-product-attributes-item__label'>Brand</th><td class='woocommerce-product-attributes-item__value'><p><a href='https://www.karlkustoms.com/brand/chevrolet-performance-powertrain/' rel='tag'>Chevrolet Performance Powertrain</a></p></td></tr></tbody></table>"
+      }
+    ],
+    "CPSLT4W6L80E": [
+      {
+        "additionalInfo": "<tbody><tr class='woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_brand'><th class='woocommerce-product-attributes-item__label'>Brand</th><td class='woocommerce-product-attributes-item__value'><p><a href='https://www.karlkustoms.com/brand/chevrolet-performance-powertrain/' rel='tag'>Chevrolet Performance Powertrain</a></p></td></tr></tbody>"
+      }
     ]
   }
 }

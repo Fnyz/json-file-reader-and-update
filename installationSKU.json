@@ -404,7 +404,16 @@
       {
         "installationLink": "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>"
       }
+    ],
+    "CPSSP350357TKT56": [
+      {
+        "installationLink": "<div class='woocommerce-Tabs-panel woocommerce-Tabs-panel--installation panel entry-content wc-tab' id='tab-installation' role='tabpanel' aria-labelledby='tab-title-installation' style=''><h2>SP350/385 Turn-Key Connect &amp; Cruise with T56 Transmission</h2><h4><a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></h4></div>"
+      }
+    ],
+    "CPSLT4W6L80E": [
+      {
+        "installationLink": "<div class='woocommerce-Tabs-panel woocommerce-Tabs-panel--installation panel entry-content wc-tab' id='tab-installation' role='tabpanel' aria-labelledby='tab-title-installation' style=''><h2>LT4 S/C 6.2L Wet Sump Connect &amp; Cruise with T56 Transmission</h2><p><a href='/Resources/ProductImages/LT4-engine-specs-wet-sump-19332621.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p></div>"
+      }
     ]
-   
   }
 }

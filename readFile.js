@@ -1,69 +1,177 @@
-const fs = require('fs');
 
 
-const installationSKU = (data, code, childData, files) => {
-    const res = Object.keys(data[Object.keys(jsonData)[0]]).find((key) => key  === code)
-    if(!res){
-       const data = {...jsonData[Object.keys(jsonData)[0]],  [code]: [childData]}
-       jsonData[Object.keys(jsonData)[0]] = data;
-       let final = JSON.stringify(jsonData, null, 2);
-       fs.writeFileSync(files, final);
-       console.log(`Installation data on code: ${code} is added successfully!`);
-    }else{
-        console.log(`Data is already exist code: ${res}`);
+const titleLabel = document.getElementById('titleLabel');
+const linkLabel = document.getElementById('linkLabel');
+const titleInput = document.getElementById('titleInput');
+const linkInput = document.getElementById('linkInput');
+const key = document.getElementById('keyInput')
+const value = document.getElementById('valueInput')
+const addMoreButton = document.getElementById('addMoreButton');
+const additionalInputsContainer = document.getElementById('additionalInputs');
+
+
+
+const multiply = [
+    {
+        title: "",
+        link: ""
     }
-}
+];
 
 
 
+addMoreButton.style.display = 'none';
+let inputCount = 0; 
 
-const handleReadFile = (file) => {
-    try {
-        const jsonData = fs.readFileSync(file, 'utf8'); 
-        const data = JSON.parse(jsonData);
-        return data;
-    } catch (error) {
-        console.error('Error reading or parsing JSON file:', error);
-        return null;
+const generateInputFields = (index, title = null, link = null) => {
+    return `
+  
+    <div id="inputSet${index}" class="inputSet mb-2">
+       
+        <label for="titleInput${index}" class="form-label">Title:</label>
+        <input type="text" id="titleInput${index}" name="titleInput" class="form-control" size="100" required value="${title}">
+        <label for="linkInput${index}" class="form-label">Link:</label>
+        <input type="text" id="linkInput${index}" name="linkInput" class="form-control" size="100" required value="${link}">
+        <button type="button" class="removeButton btn btn-danger mt-4 mb-2">Remove</button>
+    </div>
+    `;
+};
+
+
+
+const addMoreInputs = () => {
+    const newInputs = generateInputFields(inputCount, "", "");
+    additionalInputsContainer.insertAdjacentHTML('beforeend', newInputs);
+    inputCount++;
+
+  
+};
+
+// Function to remove a set of inputs
+const removeInputs = (index) => {
+    const inputSet = document.getElementById(`inputSet${index}`);
+    if (inputSet) {
+        inputSet.remove();
     }
 };
 
-const childData = (key,val) => {
-    const value = {
-        [key]: val
+// Initial generation of input fields
+
+
+
+const showMultiply = () => {
+    multiply.forEach((item, index) => {
+        const { title, link } = item;
+        const newInputs = generateInputFields(index, title, link);
+        additionalInputsContainer.insertAdjacentHTML('beforeend', newInputs);
+        inputCount++;
+    });
+}
+
+addMoreButton.addEventListener('click', addMoreInputs);
+
+
+
+additionalInputsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('removeButton')) {
+        const inputSetIndex = event.target.parentNode.id.replace('inputSet', '');
+        removeInputs(inputSetIndex);
     }
-    return value;
-}
+});
 
 
-var childD;
-// const jsonData = handleReadFile('installationSKU.json');
-const jsonData = handleReadFile('SKUContent.json');
-// const jsonData = handleReadFile('installationSKU.json');
-// const jsonData = handleReadFile('installationSKU.json');
-
-switch (Object.keys(jsonData)[0]) {
-    case 'skuInstallation':
-       childD = childData("installationLink", 
-       "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>"
-       );
-    break;
-    case 'skuContent':
-       childD = childData("additionalInfo", 
-       "<a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf'>Click here to download installation information.</a>"
-       );
-    break;
-    default:
-        break;
-}
-
-
-installationSKU(jsonData, 'testData', childD, "installationSKU.json")
-installationSKU(jsonData, 'testData', childD, "SKUContent.json")
-installationSKU(jsonData, 'testData', childD, "skuTech.json")
-installationSKU(jsonData, 'testData', childD, "videoSKU.json")
+document.getElementById('typeSelect').addEventListener('change', function() {
+    const type = this.value.trim(); // Trim whitespace from the value
+    if (type === 'videoSKU.json') {
+        showMultiply();
+        key.disabled = true;
+        value.disabled = true;
+        addMoreButton.style.display = 'inline-block';
+    } else {
+        key.disabled = false;
+        value.disabled = false;
+        additionalInputsContainer.innerHTML = ""
+        
+    }
+});
 
 
 
+const getInputValues = () => {
+    const inputSets = document.querySelectorAll('.inputSet');
+    const inputData = [];
+
+    inputSets.forEach((inputSet, index) => {
+        const titleInput = inputSet.querySelector(`#titleInput${index}`);
+        const linkInput = inputSet.querySelector(`#linkInput${index}`);
+
+        if (titleInput && linkInput) {
+            const title = titleInput.value;
+            const link = linkInput.value;
+
+            inputData.push({ title, link });
+        }
+    });
+
+    return inputData;
+};
+
+// Example usage:
+const allData = getInputValues();
+
+document.getElementById('submitButton').addEventListener('click', function(e) {
+    e.preventDefault();
 
 
+    const getInputValues = () => {
+        const inputSets = document.querySelectorAll('.inputSet');
+        const inputData = [];
+    
+        inputSets.forEach((inputSet, index) => {
+            const titleInput = inputSet.querySelector(`#titleInput${index}`);
+            const linkInput = inputSet.querySelector(`#linkInput${index}`);
+    
+            if (titleInput && linkInput) {
+                const title = titleInput.value;
+                const link = linkInput.value;
+    
+                inputData.push({ title, link });
+            }
+        });
+    
+        return inputData;
+    };
+    
+    // Example usage:
+    const allData = getInputValues();
+
+    const key = document.getElementById('keyInput').value;
+    const value = document.getElementById('valueInput').value;
+    const type = document.getElementById('typeSelect').value;
+
+    if(type === "SELECT JSON FILE"){
+        alert("Please select JSON file!");
+        return;
+    }
+ 
+    const formData = {
+        key: key,
+        value: value,
+        allData:allData,
+        type: type
+    };
+
+
+    fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        body: JSON.stringify(formData), // Convert formData to JSON
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(error => console.error('Error:', error));
+});
