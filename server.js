@@ -17,8 +17,9 @@ app.use(bodyParser.json());
 
 // Define a route to handle POST requests
 app.post('/submit', (req, res) => {
+ 
     const key = req.body.key;
-    const value = req.body.value.replace(/>\s+</g, "><").replace(/"/g, "'");     
+    const value = req.body.type === "skuTech.json" ? req.body.value.replace(/>\s+</g, "><").replace(/"/g, "'") : req.body.value.replace(/>\s+</g, "><").replace(/"/g, "'").replace(/ class='[^']*'/g, '');     
     const file = req.body.type;
     const allData = req.body.allData;
   

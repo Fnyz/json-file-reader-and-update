@@ -75,6 +75,11 @@
         "installationLink": "<a href='https://rparts-sites.s3.amazonaws.com/54b9bffcfa97867125cacff6fd70d974/design/installation-pdf/350-ho-turn-key-engine-kit-19210009.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
       }
     ],
+    "19433032": [
+      {
+        "installationLink": "<h2>SP350/357 Base Crate Engine</h2><p><a href='/Resources/ProductImages/SP350-357-base-install-sheet-12677167.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
     "19433033": [
       {
         "installationLink": "<a href='https://rparts-sites.s3.amazonaws.com/54b9bffcfa97867125cacff6fd70d974/design/installation-pdf/SP350-357-base-install-sheet-12677167.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
@@ -113,6 +118,11 @@
     "19433040": [
       {
         "installationLink": "<a href='https://rparts-sites.s3.amazonaws.com/54b9bffcfa97867125cacff6fd70d974/design/installation-pdf/SP350-385-turn-key-19333158-install-guide.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
+      }
+    ],
+    "19433041": [
+      {
+        "installationLink": "<a href='/Resources/ProductImages/ZZ6-base-engine-intall-guide-19351532.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
       }
     ],
     "19433043": [
@@ -223,6 +233,11 @@
     "19434604": [
       {
         "installationLink": "<a href='https://rparts-sites.s3.amazonaws.com/54b9bffcfa97867125cacff6fd70d974/design/installation-pdf/ct400-circle-track-racing-engine-88958604-19318604.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
+      }
+    ],
+    "19434640": [
+      {
+        "installationLink": "<a href='/Resources/ProductImages/LS376-515 Crate Engine 19301359.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
       }
     ],
     "19434650": [
@@ -407,12 +422,77 @@
     ],
     "CPSSP350357TKT56": [
       {
-        "installationLink": "<div class='woocommerce-Tabs-panel woocommerce-Tabs-panel--installation panel entry-content wc-tab' id='tab-installation' role='tabpanel' aria-labelledby='tab-title-installation' style=''><h2>SP350/385 Turn-Key Connect &amp; Cruise with T56 Transmission</h2><h4><a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></h4></div>"
+        "installationLink": "<h2>SP350/385 Turn-Key Connect &amp; Cruise with T56 Transmission</h2><h4><a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></h4>"
       }
     ],
     "CPSLT4W6L80E": [
       {
-        "installationLink": "<div class='woocommerce-Tabs-panel woocommerce-Tabs-panel--installation panel entry-content wc-tab' id='tab-installation' role='tabpanel' aria-labelledby='tab-title-installation' style=''><h2>LT4 S/C 6.2L Wet Sump Connect &amp; Cruise with T56 Transmission</h2><p><a href='/Resources/ProductImages/LT4-engine-specs-wet-sump-19332621.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p></div>"
+        "installationLink": "<h2>LT4 S/C 6.2L Wet Sump Connect &amp; Cruise with T56 Transmission</h2><p><a href='/Resources/ProductImages/LT4-engine-specs-wet-sump-19332621.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "CPSZZ5025026LMAN": [
+      {
+        "installationLink": "<h2>ZZ502/502 Connect &amp; Cruise with T56 Transmission</h2><p><a href='/Resources/ProductImages/502-502-Base-engine-long-block-specifications.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "19434604D2": [
+      {
+        "installationLink": "<a href='/Resources/ProductImages/ct400-circle-track-racing-engine-88958604-19318604.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a>"
+      }
+    ],
+    "CPSZZ4274L70E": [
+      {
+        "installationLink": "<h2>ZZ427/480 Connect &amp; Cruise with 4L70-E Transmission</h2><p><a href='/Resources/ProductImages/zz427-480-crate-engine-installation-guide-19166393.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "CPSZZ5024L85E": [
+      {
+        "installationLink": "<h3>ZZ502/502 Deluxe Connect &amp; Cruise with 4L85-E Transmission</h3><p><a href='/Resources/ProductImages/454ho-crate-long-block-installation-guide-12568774.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "CPSLS3764804L70E": [
+      {
+        "installationLink": "<h3>LS376/480 Connect &amp; Cruise with 4L70-E Transmission</h3><p>Chevrolet Performance recommends the <a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'><strong>LS1 Engine Installation Guide</strong> P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on installing an LS engine into older vehicles.</p>"
+      }
+    ],
+    "CPSLS34X4L70E": [
+      {
+        "installationLink": "<h2>LS3 4×4 Connect &amp; Cruise with 4L70-E Transmission</h2><p><a href='/Resources/ProductImages/LS3-efi-crate-engine-19301326.pdf' target='_blank' rel='noopener'>Click here to download engine installation information.</a></p><p>Chevrolet Performance recommends the <a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'><strong>LS1 Engine Installation Guide</strong> P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on performing LS engine swaps into older vehicles.</p>"
+      }
+    ],
+    "CPSLS34L65E": [
+      {
+        "installationLink": "<h3>LS3 Connect &amp; Cruise with 4L65-E Transmission</h3><p><a href='/Resources/ProductImages/LS3-efi-crate-engine-19301326.pdf' target='_blank' rel='noopener'>Click here to download engine installation information.</a></p><p>Chevrolet Performance recommends the <a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'><strong>LS1 Engine Installation Guide</strong> P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on performing LS engine swaps into older vehicles.</p>"
+      }
+    ],
+    "CPSSP3834L70E": [
+      {
+        "installationLink": "<h2>SP383 Deluxe Connect &amp; Cruise with 4L70-E Automatic Transmission</h2><p><a href='/Resources/ProductImages/SP383-deluxe-19332532-install-guide.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "CPSLS3EROD4L65E": [
+      {
+        "installationLink": "<h2>LS3 E-ROD Connect &amp; Cruise with 4L65-E Transmission</h2><p>Chevrolet Performance recommends the <a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'><strong>LS1 Engine Installation Guide</strong> P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on installing an LS engine into older vehicles.</p>"
+      }
+    ],
+    "CPSZZ6TKT56": [
+      {
+        "installationLink": "<h2>ZZ6 Turn-Key Connect &amp; Cruise with T56 Transmission</h2><p><a href='/Resources/ProductImages/ZZ6-base-engine-intall-guide-19351532.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
+      }
+    ],
+    "CPSLS34806L80E3000": [
+      {
+        "installationLink": "<h3>LS376/480 Connect &amp; Cruise with 6L80-E Transmission (3000 Stall)</h3><p>Chevrolet Performance recommends the&nbsp;<a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'>LS1 Engine Installation Guide&nbsp;P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on installing an LS engine into older vehicles.</p>"
+      }
+    ],
+    "CPSLS3765154L70E": [
+      {
+        "installationLink": "<h2>LS376/515 Connect &amp; Cruise with 4L70-E Transmission</h2><p>Chevrolet Performance recommends the <a href='/p/88959384-LS1-Engine-Installation-Guide/45477/17' target='_blank' rel='noopener'><strong>LS1 Engine Installation Guide</strong> P/N 88959384</a>, which illustrates basic procedures and offers helpful tips on installing an LS engine into older vehicles.</p>"
+      }
+    ],
+    "CPS350HOTK4L65E": [
+      {
+        "installationLink": "<h2>350HO Turn-Key Connect &amp; Cruise with 4L65-E Transmission</h2><p><a href='/Resources/ProductImages/350-ho-turn-key-engine-kit-19210009.pdf' target='_blank' rel='noopener'>Click here to download installation information.</a></p>"
       }
     ]
   }

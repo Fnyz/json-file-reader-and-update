@@ -84,7 +84,6 @@ document.getElementById('typeSelect').addEventListener('change', function() {
     const type = this.value.trim(); // Trim whitespace from the value
     if (type === 'videoSKU.json') {
         showMultiply();
-        key.disabled = true;
         value.disabled = true;
         addMoreButton.style.display = 'inline-block';
     } else {
@@ -130,24 +129,27 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
         inputSets.forEach((inputSet, index) => {
             const titleInput = inputSet.querySelector(`#titleInput${index}`);
             const linkInput = inputSet.querySelector(`#linkInput${index}`);
-    
+            const regex = /<iframe.*?src=["'](.*?)["']/;
+
             if (titleInput && linkInput) {
-                const title = titleInput.value;
-                const link = linkInput.value;
-    
+                const title = titleInput.value.trim();
+                const link = linkInput.value.match(regex)[1].trim();
                 inputData.push({ title, link });
             }
         });
     
         return inputData;
     };
-    
+ 
     // Example usage:
     const allData = getInputValues();
+
 
     const key = document.getElementById('keyInput').value;
     const value = document.getElementById('valueInput').value;
     const type = document.getElementById('typeSelect').value;
+
+   
 
     if(type === "SELECT JSON FILE"){
         alert("Please select JSON file!");
@@ -155,8 +157,8 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
     }
  
     const formData = {
-        key: key,
-        value: value,
+        key: key.trim(),
+        value: value.trim(),
         allData:allData,
         type: type
     };
@@ -172,6 +174,8 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
     .then(response => response.json())
     .then(data => {
         alert(data.message);
+        document.getElementById('keyInput').value = '';
+        document.getElementById('valueInput').value = '';
     })
     .catch(error => console.error('Error:', error));
 });
